@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #F5F5F7;
+  --color-surface: #FFFFFF;
+  --color-primary: #0071E3;
+  --color-primary-foreground: #FFFFFF;
+  --color-text-primary: #1D1D1F;
+  --color-text-secondary: #6E6E73;
+  --color-border: #D2D2D7;
+
+  /* Status colors */
+  --color-status-moving: #30D158;
+  --color-status-stopped: #FF9F0A;
+  --color-status-incident: #FF375F;
+  --color-status-off-route: #BF5AF2;
+  --color-status-offline: #8E8E93;
+  --color-status-delivering: #0071E3;
+
+  --color-destructive: #FF375F;
+  --color-success: #30D158;
+  --color-warning: #FF9F0A;
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --radius-card: 12px;
+  --radius-button: 8px;
+  --radius-badge: 20px;
+
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04);
+  --shadow-overlay: 0 8px 32px rgba(0,0,0,0.12);
+  --shadow-dropdown: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+
+/* Google Maps info window reset */
+.gm-style .gm-style-iw-c {
+  border-radius: 12px !important;
+  box-shadow: var(--shadow-overlay) !important;
+}
